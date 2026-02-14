@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy Elite | Professional UI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-content">
+            <div class="logo-wrapper">
+                <span class="brand-name">SWIGGY<span class="lite">ELITE</span></span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#">Search</a>
+                <a href="#">Offers</a>
+                <a href="#">Help</a>
+                <button class="login-pill">Sign In</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-text-area">
+                <span class="tagline">TASTE THE EXTRAORDINARY</span>
+                <h1 id="changing-text">Craving <span class="accent">Perfection?</span></h1>
+                <p class="quote">"First we eat, then we do everything else." — M.F.K Fisher</p>
+                
+                <div class="search-bar-modern">
+                    <input type="text" placeholder="Search for 'Biryani' or 'Pizza'...">
+                    <button class="go-btn">GO</button>
+                </div>
+            </div>
+
+            <div class="floating-assets">
+                <img src="assets/ChickenB.png" class="float-item biryani-float" alt="">
+                <img src="assets/chicken.png" class="float-item pizza-float" alt="Chicken">
+                <img src="assets/coolcdrink.png" class="float-item drink-float" alt="Drink">
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="categories">
+            <h2 class="section-title">What's on your mind?</h2>
+            <div class="category-list">
+                <div class="cat-item">
+                    <div class="cat-img-box"><img src="assets/burger.jpg" alt="Burger"></div>
+                    <span>Burger</span>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-img-box"><img src="assets/pizza.png" alt="Pizza"></div>
+                    <span>Pizza</span>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-img-box"><img src="assets/ChikenB.png" alt="Biryani"></div>
+                    <span>Biryani</span>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-img-box"><img src="assets/pizza.png" alt="Veg"></div>
+                    <span>Pure Veg</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="restaurants">
+            <h2 class="section-title">Top Rated Places</h2>
+            <div class="restaurant-grid">
+                <div class="res-card">
+                    <div class="img-box">
+                        <img src="assets/ChikenB.png" alt="Biryani">
+                        <div class="badge">PROMOTED</div>
+                    </div>
+                    <div class="res-details">
+                        <h3>Bismillah Biryani</h3>
+                        <p>Pizzas, Beverages, Desserts</p>
+                        <div class="stats">
+                            <span class="rating-box">4.5 ★</span>
+                            <span>• 30 mins</span>
+                            <span>• ₹400 for two</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="res-card">
+                    <div class="img-box">
+                        <img src="assets/burger.jpg" alt="Burger">
+                        <div class="badge">BESTSELLER</div>
+                    </div>
+                    <div class="res-details">
+                        <h3>Burger Empire</h3>
+                        <p>American, Fast Food</p>
+                        <div class="stats">
+                            <span class="rating-box">4.2 ★</span>
+                            <span>• 20 mins</span>
+                            <span>• ₹300 for two</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="top-brands">
+            <h2 class="section-title">Top Brands in Focus</h2>
+            <div class="brand-grid">
+                <div class="brand-logo">KFC</div>
+                <div class="brand-logo">McDonald's</div>
+                <div class="brand-logo">Dominos</div>
+                <div class="brand-logo">Subway</div>
+                <div class="brand-logo">Burger King</div>
+                <div class="brand-logo">Pizza Hut</div>
+            </div>
+        </section>
+
+        <section class="cities-section">
+            <h2 class="section-title">Popular Cities</h2>
+            <div class="city-links">
+                <span>Bangalore</span><span>Mumbai</span><span>Delhi</span><span>Hyderabad</span>
+                <span>Chennai</span><span>Kolkata</span><span>Pune</span><span>Ahmedabad</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="elite-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>SWIGGY ELITE</h3>
+                <p>© 2026 Elite Tech Pvt. Ltd</p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#">About</a><a href="#">Careers</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="#">Help & Support</a><a href="#">Partner</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const texts = [
+            'Craving <span class="accent">Perfection?</span>',
+            'Hungry for <span class="accent">Adventure?</span>',
+            'Late night <span class="accent">Snacking?</span>',
+            'Cooking is <span class="accent">Overrated.</span>',
+            'Food is <span class="accent">Emotion.</span>'
+        ];
+        let index = 0;
+        const element = document.getElementById('changing-text');
+
+        setInterval(() => {
+            element.style.opacity = 0;
+            setTimeout(() => {
+                index = (index + 1) % texts.length;
+                element.innerHTML = texts[index];
+                element.style.opacity = 1;
+            }, 500);
+        }, 3000);
+    </script>
+</body>
+</html>
